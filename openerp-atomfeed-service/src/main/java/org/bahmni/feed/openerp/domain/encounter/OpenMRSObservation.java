@@ -28,7 +28,11 @@ public class OpenMRSObservation {
         return value;
     }
 
-    public void setValue(String value) {
-        this.value = value;
+    public void setValue(Object value) {
+        if(value != null) {
+            this.value = value.toString();
+        }else{
+            this.value = null;
+        }
     }
 }
